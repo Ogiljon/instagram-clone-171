@@ -1,0 +1,253 @@
+@import './fonts', './normalize', './variables', './mixins.scss';
+
+.wrapper{
+    position: relative;
+    font-family: 'Segoe UI';
+    font-style: normal;
+}
+
+.container{
+    width: 100%;
+    max-width: 986px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header{
+    padding: 9px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid $borderColor;
+    z-index: 10;
+    background-color: #ffff;
+
+    &__row{
+        @include flex(center, space-between);
+    }
+
+    &__navbar{
+        display: flex;
+    }
+
+    &__link{
+       width: 22px;
+       height: 22px;
+
+        &:not(:last-child){
+            margin-right: 22px;
+        }
+
+        &-img{
+            border-radius: 50%;
+        }
+    }
+
+    &__search{
+        gap: 5px;
+        display: flex;
+        align-items: center;
+        border: 1px solid $borderColor;
+        border-radius: 3px;
+        padding: 5px;
+
+        &-input{
+            font-family: inherit;
+            border: none;
+            outline: none;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 129% ;
+            color: $gray;
+        }
+    }
+}
+
+/* MAIN - START*/
+
+.main{
+    padding-top: 82px;
+
+    &__left{
+        width: calc($containerWidth * 64.9 / 100);
+        height: 100vh;
+    }
+
+    &__right{
+        width: calc($containerWidth - ($containerWidth * 64.9 / 100) - 30px);
+        position: fixed;
+        top: 82px;
+        right: calc((100vw - $containerWidth) / 2);
+    }
+}
+
+.post{
+    border: 1px solid $gray;
+    &__header{
+        padding: 9px 16px;
+        @include flex(center, space-between);
+
+        &-left{
+            @include flex(center, unset);
+            gap: 16px;
+        }
+    }
+
+    &__img{
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    &__footer{
+        padding: 10px;
+
+        &__top{
+            @include flex(center, space-between);
+        }
+
+        &__text{
+            @include flex(center, unset);
+            gap: 8px;
+        }
+
+        &__comment{
+            padding: 6px 0;
+
+            &-title{
+                font-family: inherit;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 129%;
+                color: $gray;
+            }
+
+
+            &-sub{
+                padding: 6px 0;
+                font-family: inherit;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 129% ;
+                color: $gray;
+                border-bottom: 1px solid $gray;
+            }
+        }
+        
+        &__leave{
+            @include flex (center, space-between);
+            padding: 8px;
+
+        }
+
+        &__leave___left{
+            display: flex;
+            align-items: center;
+
+            &-sub{
+                font-family: inherit;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 129%;
+            }
+        }
+
+        .post__footer__leave__right-blue{
+            font-size: 14px;
+            color: blue;
+        }
+    }
+}
+
+.main{
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    &__right{
+        padding: 20px;
+        &-img{
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%
+            }
+        }
+
+        &__fath{
+            @include flex(center, space-between);
+        }
+
+        &__subb{
+            padding: 8px 0;
+            font-family: inherit;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 129% ;
+            color: $gray;
+        }
+
+        &__btn{
+            &__btnn{
+                color: blue;
+            }
+        }
+
+        .suggestions{
+            padding: 8px 0 8px 0;
+            &__row{
+                @include flex(center, space-between);
+            }
+
+                &__title{
+                font-family: inherit;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 129% ;
+                color: $gray;
+                }
+        }
+
+        .main__row__two{
+            @include flex(center, space-between);
+            padding: 0px;
+
+            &-img{
+                margin-right: 10px;
+                width: 30px;
+                height: 30px;
+    
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+
+        }
+    }
+}
+
+/* MAIN - END*/
+
+/* FOOTER - START*/
+
+
+/* FOOTER - END*/
